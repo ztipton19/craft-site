@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Boento Blooms — handmade crafts made with love, currently raising money for our elementary school.">
+  <title>Boento Blooms | Crafts that help things grow</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon_32.png">
+  <link rel="apple-touch-icon" href="assets/brand/favicon_180.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the crafts</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Boento Blooms home">
+      <img src="assets/brand/wide_logo.png" alt="Boento Blooms">
+    </a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <nav id="nav-links" class="nav-links" aria-label="Main navigation">
+      <a href="#fundraiser">Our goal</a>
+      <a href="#crafts">The crafts</a>
+      <a class="nav-cta" href="#how-to-buy">How to buy</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">Little hands · big heart</p>
+        <h1>Crafts that help<br><em>good things grow.</em></h1>
+        <p class="intro">I make bright, happy things by hand and sell them in person to help causes I care about.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#crafts">See what I make</a>
+          <a class="text-link" href="#fundraiser">See our school goal <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun-shape"></div>
+        <img class="hero-logo" src="assets/brand/main_logo.png" alt="">
+        <img class="hero-flower" src="assets/brand/flower_icon.png" alt="">
+        <img class="hero-star" src="assets/brand/star_icon.png" alt="">
+      </div>
+    </section>
+
+    <section class="fundraiser-section" id="fundraiser" aria-labelledby="fundraiser-title">
+      <div class="section-heading">
+        <p class="eyebrow">What we’re growing right now</p>
+        <h2 id="fundraiser-title">Helping our elementary school bloom</h2>
+      </div>
+      <div class="goal-card">
+        <div class="goal-copy">
+          <div class="goal-label"><img src="assets/brand/community_badge.png" alt="For our community"></div>
+          <p>Every craft sold during this fundraiser helps support student programs and classroom activities.</p>
+          <p class="small-note">Thank you for cheering me on!</p>
+        </div>
+        <div class="goal-progress">
+          <div class="numbers"><strong>$375</strong><span>raised of $500</span></div>
+          <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="500" aria-valuenow="375" aria-label="$375 raised toward a $500 goal">
+            <span style="width:75%"></span>
+          </div>
+          <div class="progress-meta"><span>75% there</span><span>$125 to go</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="crafts-section" id="crafts" aria-labelledby="crafts-title">
+      <div class="section-heading row-heading">
+        <div>
+          <p class="eyebrow">Made one at a time</p>
+          <h2 id="crafts-title">A few happy little things</h2>
+        </div>
+        <p class="section-note">Each piece is handmade, so colors and details are always a little different.</p>
+      </div>
+      <div class="craft-grid">
+        <article class="craft-card coral">
+          <div class="craft-image"><img src="assets/brand/heart_icon.png" alt="Colorful handmade friendship bracelets"></div>
+          <div class="craft-info"><div><h3>Friendship bracelets</h3><p>Colorful, stackable &amp; made to share</p></div><span>from $3</span></div>
+        </article>
+        <article class="craft-card lavender">
+          <div class="craft-image"><img src="assets/brand/flower_icon.png" alt="Handmade flower keychains"></div>
+          <div class="craft-info"><div><h3>Flower keychains</h3><p>A tiny bloom for bags and backpacks</p></div><span>from $5</span></div>
+        </article>
+        <article class="craft-card yellow">
+          <div class="craft-image"><img src="assets/brand/star_icon.png" alt="Decorated bookmarks with stars"></div>
+          <div class="craft-info"><div><h3>Happy bookmarks</h3><p>Bright little page-savers for readers</p></div><span>from $2</span></div>
+        </article>
+      </div>
+      <p class="availability">Selection changes as new ideas are made. Look for us at the next in-person sale!</p>
+    </section>
+
+    <section class="buy-section" id="how-to-buy" aria-labelledby="buy-title">
+      <div class="buy-art" aria-hidden="true">
+        <img src="assets/brand/rainbow_badge.png" alt="">
+      </div>
+      <div class="buy-copy">
+        <p class="eyebrow">See something you love?</p>
+        <h2 id="buy-title">Come say hi in person.</h2>
+        <p>Boento Blooms crafts are sold at local events and pop-up tables. Scan the QR code on our sign anytime to check the current fundraiser and see what’s being made.</p>
+        <div class="notice"><span aria-hidden="true">♥</span><p><strong>No online checkout—yet!</strong><br>Purchases and donations happen in person with a grown-up helping.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="assets/brand/made_with_love.png" alt="Made with love">
+    <p>Handmade with care for our community.</p>
+    <p class="copyright">© <span id="year"></span> Boento Blooms</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
