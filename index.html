@@ -19,6 +19,7 @@
     <nav id="nav-links" class="nav-links" aria-label="Main navigation">
       <a href="#fundraiser">Our goal</a>
       <a href="#crafts">The crafts</a>
+      <a href="#request">Request a craft</a>
     </nav>
   </header>
 
@@ -81,6 +82,38 @@
           <div class="craft-image"><img src="assets/brand-kit/star_icon.png" alt="Decorated bookmarks with stars"></div>
           <div class="craft-info"><div><h3>Happy bookmarks</h3><p>Bright little page-savers for readers</p></div><span>from $2</span></div>
         </article>
+      </div>
+    </section>
+
+    <section class="request-section" id="request" aria-labelledby="request-title">
+      <div class="request-card">
+        <div class="request-intro">
+          <p class="eyebrow">Already donated?</p>
+          <h2 id="request-title">Request your craft</h2>
+          <p>Thank you for supporting Judith’s school! Tell us what you’d like and any details we should know. We’ll take it from here.</p>
+        </div>
+        <form class="craft-request-form" action="https://formspree.io/f/mzedplgp" method="POST">
+          <label for="request-name">Your name</label>
+          <input id="request-name" name="name" type="text" autocomplete="name" required>
+
+          <label for="request-item">What would you like?</label>
+          <select id="request-item" name="item" required>
+            <option value="" selected disabled>Choose a craft</option>
+            <option>Friendship bracelet</option>
+            <option>Flower keychain</option>
+            <option>Happy bookmark</option>
+            <option>Other</option>
+          </select>
+
+          <label for="request-quantity">How many?</label>
+          <input id="request-quantity" name="quantity" type="number" min="1" value="1" required>
+
+          <label for="request-notes">Anything we should know?</label>
+          <textarea id="request-notes" name="notes" rows="5" placeholder="Colors, customization, or anything else you'd like to tell us."></textarea>
+
+          <input type="hidden" name="_subject" value="New Boento Blooms craft request">
+          <button class="button primary form-submit" type="submit">Send my request</button>
+        </form>
       </div>
     </section>
 
