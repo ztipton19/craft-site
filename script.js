@@ -13,3 +13,36 @@ links.addEventListener('click', ({ target }) => {
   }
 });
 document.querySelector('#year').textContent = new Date().getFullYear();
+
+const bookmarkGallery = document.querySelector('#bookmark-gallery');
+if (bookmarkGallery) {
+  const bookmarkCodes = Array.from({ length: 12 }, (_, index) => `BM${String(index + 2).padStart(3, '0')}`);
+  const galleryImage = bookmarkGallery.querySelector('.gallery-image');
+  const galleryCode = bookmarkGallery.querySelector('.gallery-code');
+  const galleryCount = bookmarkGallery.querySelector('.gallery-count');
+  let currentBookmark = 0;
+
+  const showBookmark = (index) => {
+    currentBookmark = (index + bookmarkCodes.length) % bookmarkCodes.length;
+    const code = bookmarkCodes[currentBookmark];
+    galleryImage.src = `assets/inventory/bookmarks/${code}.jpg`;
+    galleryImage.alt = `Bookmark ${code}`;
+    galleryCode.textContent = code;
+    galleryCount.textContent = `${currentBookmark + 1} of ${bookmarkCodes.length}`;
+  };
+
+  document.querySelector('.gallery-trigger').addEventListener('click', () => {
+    showBookmark(0);
+    bookmarkGallery.showModal();
+  });
+  bookmarkGallery.querySelector('.gallery-close').addEventListener('click', () => bookmarkGallery.close());
+  bookmarkGallery.querySelector('.gallery-previous').addEventListener('click', () => showBookmark(currentBookmark - 1));
+  bookmarkGallery.querySelector('.gallery-next').addEventListener('click', () => showBookmark(currentBookmark + 1));
+  bookmarkGallery.addEventListener('click', ({ target }) => {
+    if (target === bookmarkGallery) bookmarkGallery.close();
+  });
+  bookmarkGallery.addEventListener('keydown', ({ key }) => {
+    if (key === 'ArrowLeft') showBookmark(currentBookmark - 1);
+    if (key === 'ArrowRight') showBookmark(currentBookmark + 1);
+  });
+}
