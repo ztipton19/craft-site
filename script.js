@@ -1,3 +1,29 @@
+// FUNDRAISER TRACKER: update these two numbers only.
+const fundraiser = {
+  raised: 20,
+  goal: 100,
+};
+
+const fundraiserProgress = document.querySelector('.goal-progress');
+if (fundraiserProgress) {
+  const percent = fundraiser.goal > 0
+    ? Math.min(100, Math.max(0, (fundraiser.raised / fundraiser.goal) * 100))
+    : 0;
+  const roundedPercent = Math.round(percent);
+  const remaining = Math.max(0, fundraiser.goal - fundraiser.raised);
+  const progressTrack = fundraiserProgress.querySelector('.progress-track');
+
+  fundraiserProgress.querySelector('[data-fundraiser-raised]').textContent = `${fundraiser.raised}`;
+  fundraiserProgress.querySelector('[data-fundraiser-goal]').textContent = `${fundraiser.goal}`;
+  fundraiserProgress.querySelector('[data-fundraiser-percent]').textContent = `${roundedPercent}% there`;
+  fundraiserProgress.querySelector('[data-fundraiser-remaining]').textContent = `${remaining} to go`;
+  fundraiserProgress.querySelector('[data-fundraiser-bar]').style.width = `${percent}%`;
+
+  progressTrack.setAttribute('aria-valuemax', String(fundraiser.goal));
+  progressTrack.setAttribute('aria-valuenow', String(fundraiser.raised));
+  progressTrack.setAttribute('aria-label', `${fundraiser.raised} raised toward a ${fundraiser.goal} goal`);
+}
+
 const menu = document.querySelector('.menu');
 const links = document.querySelector('.nav-links');
 menu.addEventListener('click', () => {
